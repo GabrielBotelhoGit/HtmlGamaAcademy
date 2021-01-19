@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap parte #01</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <style>
+        
+        footer{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            border: lightgray 1px solid;            
+            -webkit-box-shadow: 0px 7px 5px 0px rgba(161,161,161,1);
+            -moz-box-shadow: 0px 7px 5px 0px rgba(161,161,161,1);
+            box-shadow: 0px 0px 5px 0px rgba(161,161,161,1);
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            height: 100px;
+            border-bottom: lightgray 1px solid;
+            padding-left: 15%;
+            -webkit-box-shadow: 0px 7px 5px 0px rgba(161,161,161,1);
+            -moz-box-shadow: 0px 7px 5px 0px rgba(161,161,161,1);
+            box-shadow: 0px 0px 5px 0px rgba(161,161,161,1);
+        }
+        .esquerda{
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .espacoAcima{
+            margin-top: 5%;
+        }
+        .alturaTotal{
+            height:100%;
+        }
+        .corpoCartao{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
+        .corpoCartao .card-title{
+            margin-top:5%;
+            margin-bottom: 5%;
+        }
+        .conteudo{
+            width: 100%;
+        }
+        section{
+            margin-bottom: 50px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container m-auto" width="100%">
+                <a class="navbar-brand" href="#">
+                    <img src="https://boring-feynman-12ba8b.netlify.app/img/bootstrap-5.svg" class="img-fluid" width="200px" alt="">
+                </a>
+                <button class="navbar-toggler" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Entrar</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"  data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Seções</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#cartoes">Cartoes</a>
+                                <a class="dropdown-item" href="#listGroup">ListGroup</a>
+                                <a class="dropdown-item" href="#formControl">From Control</a>
+                                <a class="dropdown-item" href="#tables">Tables</a>
+                                <label class="dropdown-item" id="toastButton">Toast</label>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#rodape">Footer</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>   
+    
+    
+    <div style="position: absolute; top: 100px; right: 0;" id="toastPlace"> 
+        <div class="toast" id="toaster" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="..." class="rounded mr-2" alt="...">
+                <strong class="mr-auto">Bootstrap</strong>
+                <small class="text-muted">just now</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" onclick="sumirToast()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                See? Just like this.
+            </div>
+        </div> 
+    </div>
+
+    
+    <br>
+    <br>
+    <div class="container">
+        <section id="cartoes">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card alturaTotal">                    
+                        <div class="card-body corpoCartao">
+                            <h2 class="card-title">DashBoard1</h2>
+                            <div class="conteudo">
+                                Aqui ficarão informações úteis sobre o dashboard
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card alturaTotal">                    
+                        <div class="card-body corpoCartao">
+                            <h2 class="card-title">DashBoard2</h2>
+                            <div class="conteudo">
+                                Aqui ficarão informações úteis sobre o dashboard
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card alturaTotal">                    
+                        <div class="card-body corpoCartao">
+                            <h2 class="card-title">DashBoard3</h2>
+                            <div class="conteudo">
+                                Aqui ficarão informações úteis sobre o dashboard
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>  
+        
+        <section id="listGroup">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <li class="list-group-item">Dapibus ac facilisis in</li>                                              
+                        <li class="list-group-item list-group-item-primary">A simple primary list group item</li>
+                        <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
+                        <li class="list-group-item list-group-item-success">A simple success list group item</li>
+                        <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+                        <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+                        <li class="list-group-item list-group-item-info">A simple info list group item</li>
+                        <li class="list-group-item list-group-item-light">A simple light list group item</li>
+                        <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <li class="list-group-item">Dapibus ac facilisis in</li>                                              
+                        <li class="list-group-item list-group-item-primary">A simple primary list group item</li>
+                        <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
+                        <li class="list-group-item list-group-item-success">A simple success list group item</li>
+                        <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+                        <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+                        <li class="list-group-item list-group-item-info">A simple info list group item</li>
+                        <li class="list-group-item list-group-item-light">A simple light list group item</li>
+                        <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="formControl">
+            <div class="row">
+                <div class="col-md-12">
+                    <form>
+                        <div class="form-group">
+                            <label>Nome</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Cpf</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>RG</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Logradouro</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Telefone</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <br>
+                        <button type="button" onclick="" class="btn btn-primary">Clique aqui para enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <section id="tables">
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>            
+        </section>        
+    </div>  
+    
+    <footer id="rodape">
+        @CopyRight Gabriel Carreiras Botelho        
+        <a href="#top">
+            Retornar ao topo
+        </a>
+    </footer>
+    
+</body>
+<script>
+    $("#toastButton").click(function () {        
+        $(".toast").toast("show");
+    });
+
+    function sumirToast(){
+        $(".toast").toast("hide");
+    }
+</script>
+</html>
