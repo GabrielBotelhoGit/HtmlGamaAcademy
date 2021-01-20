@@ -266,5 +266,6 @@ i {
     align-items: center;
     top: 91%;
     left: 25%;
+    transition: 1s;
   }
 }
