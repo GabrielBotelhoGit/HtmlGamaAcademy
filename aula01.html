@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aula #01 Html</title>
+        <style>
+
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            .container{
+                max-width: 80%;
+                margin:0 auto;
+            }
+            html{
+                scroll-behavior: smooth;
+            }
+            section{
+                background-color: darkcyan;
+            }
+            .content{
+                height: 50vh;
+                width: 100%;
+                margin: 20px 0px 20px 0px;
+                display: flex;
+                text-align: center;
+                color: white;
+                flex-direction: column;
+                justify-content: center;
+            }
+            div > a{
+                text-decoration: none;
+                color:lightsalmon;
+            }
+            footer{
+                text-align: center;
+            }
+            nav{
+                display: flex;
+                justify-content: space-between;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header id="top">
+            <nav class="container"> 
+                <img src="https://drcode.com.br/blog/wp-content/uploads/2015/02/html5.jpg" id="img" alt="html5">
+                <ul>
+                    <li><a href="#01"> Link 01</a></li>
+                    <li><a href="#02"> Link 02</a></li>
+                    <li><a href="#03"> Link 03</a></li>
+                    <li><a href="#04"> Link 04</a></li>
+                    <li><a href="aula01_paginaDesafio.html"> Página desafio</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div>
+            <section class="content" id="01">
+                <div>
+                    <h1>
+                        Section #01
+                    </h1>
+                    <a href="#top">Ir para o topo</a>
+                </div>
+            </section>
+
+            <section class="content" id="02">
+                <div>
+                    <h1>
+                        Section #02
+                    </h1>
+                    <a href="#top">Ir para o topo</a>
+                </div>
+            </section>
+
+            <section class="content" id="03">
+                <div>
+                    <h1>
+                        Section #03
+                    </h1>
+                    <a href="#top">Ir para o topo</a>
+                </div>
+            </section>
+
+            <section class="content" id="04">
+                <div>
+                    <h1>
+                        Section #04
+                    </h1>
+                    <a href="#top">Ir para o topo</a>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            Texto do rodapé
+        </footer>
+
+    </body>
+</html>

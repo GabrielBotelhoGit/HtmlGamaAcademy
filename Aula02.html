@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8ac0ce319f.js" crossorigin="anonymous"></script>
+    <title>Bootstrap parte #01</title>
+</head>
+<body>
+    <header class="container bg-color--purple">
+        <div class="container-header content-default">
+            <h1>Iniciando com flexbox</h1>
+            <p>
+                Primeiro Elemento
+            </p>
+        </div>
+    </header>
+
+    <div class="container bg-color--blue text-center">
+        <h2>
+            Display flex
+        </h2>
+        <h2>
+            Display: flex wrap
+        </h2>
+        <div class="content-flex content-default">
+            <div class="bg-color--purple flex-wrap">
+                <h3>
+                    #01
+                </h3>
+            </div>
+            <div class="bg-color--purple flex-wrap">
+                <h3>
+                    #02
+                </h3>
+            </div>
+            <div class="bg-color--purple flex-wrap">
+                <h3>
+                    #03
+                </h3>
+            </div>
+        </div>       
+        
+        <h2>Display: grid | wrap</h2>
+        <div class="content-flexgrid content-default">
+            <div class="content-flex--direction bg-color--purple flex-wrap">
+                <h3>1</h3>
+            </div>
+            <div class="content-flex--direction bg-color--purple flex-wrap">
+                <h3>2</h3>
+            </div>
+            <div class="content-flex--direction bg-color--purple flex-wrap">
+                <h3>3</h3>
+            </div>
+        </div>
+
+        <h2>
+            Display grid flexitem
+        </h2>
+        <div class="content-flexgrid content-default">
+            <div class="bg-color--purple content-flex--direction flex-item--1">
+                <h3>1</h3>
+            </div>
+            <div class="bg-color--purple content-flex--direction flex-item--1">
+                <h3>2</h3>
+            </div>
+            <div class="bg-color--purple content-flex--direction flex-item--1">
+                <h3>3</h3>
+            </div>
+        </div>
+
+        <h2>
+            Display flex flexitem
+        </h2>
+        <div class="content-default container bg-color--pink">
+            <div class="content-flex content-default">
+                <div class="bg-color--purple content-flex--direction flex-item--1">
+                    <h3>F1</h3>
+                </div>
+                <div class="bg-color--purple content-flex--direction flex-item--2">
+                    <h3>F2</h3>
+                </div>
+                <div class="bg-color--purple content-flex--direction flex-item--3">
+                    <h3>F3</h3>
+                </div>
+            </div>
+        </div>
+    
+        <h2>
+            Display: flex-direction
+        </h2>
+        <div class="content-default container bg-color--pink ">
+            <div class="content-flex content-default content-flex--reverse">
+                <div class="bg-color--purple content-flex--direction flex-item--1">
+                    <h3>F1</h3>
+                </div>
+                <div class="bg-color--purple content-flex--direction flex-item--2">
+                    <h3>F2</h3>
+                </div>
+                <div class="bg-color--purple content-flex--direction flex-item--3">
+                    <h3>F3</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-default container bg-color--yellow text-center">
+            <h2>
+                Justify contents
+            </h2>
+            <div class="content-flex content-justify">
+                <div class="bg-color--purple content-space--default">
+                    <h3>Bloco 01</h3>
+                </div>
+                <div class="bg-color--purple content-space--default">
+                    <h3>Bloco 02</h3>
+                </div>
+                <div class="bg-color--purple content-space--default">
+                    <h3>Bloco 03</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-default container bg-color--purple text-center">
+            <h2>
+                Align items
+            </h2>
+            <div class="content-justify--bt content-flex content-align">
+                <div class="bg-color--yellow content-space--default primeira">
+                    <h3>Bloco 01</h3>
+                    <h3>Bloco 02</h3>
+                    <h3>Bloco 03</h3>
+                </div>
+                <div class="bg-color--yellow content-space--default">
+                    <h3>Bloco 02</h3>
+                </div>
+                <div class="bg-color--yellow content-space--default">
+                    <h3>Bloco 03</h3>
+                    <h3>Bloco 02</h3>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div class="container-paralax bg-img--version--1">
+        <div class="container content-flex content-align content-justify text-center content-paralax--data">
+            <h2>
+                Container with paralax
+            </h2>
+            <p>
+                Text
+            </p>
+        </div>
+    </div>
+
+    <div class="container-paralax bg-img--version--2">
+        <div class="container content-flex content-align content-justify text-center content-paralax--data">
+            <h2>
+                Container with paralax
+            </h2>
+            <p>
+                Text
+            </p>
+        </div>
+    </div>
+
+    <div class="container-paralax bg-img--version--3">
+        <div class="container content-flex content-align content-justify text-center content-paralax--data">
+            <h2>
+                Container with paralax
+            </h2>
+            <p>
+                Text
+            </p>
+        </div>
+    </div>
+
+    <div class='content-left--main'>
+        <a href="#01">
+            <i class="fas fa-rocket"></i>
+        </a>
+        <a href="#02">
+            <i class="fas fa-house-user"></i>
+        </a>
+        <a href="#03">
+            <i class="fas fa-globe-americas"></i>
+        </a>
+        <a href="#04">
+            <i class="fas fa-share-alt-square"></i>
+        </a>
+    </div>
+
+    <div class="content-top--button">
+        <a href="#top">
+            <i class="fas fa-arrow-circle-up"></i>
+        </a>
+    </div>
+
+    <footer class="text-center">
+        Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>

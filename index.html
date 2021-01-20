@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap parte #01</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <style>
+            .header{
+              display: flex;
+              align-items: center;
+              height: 100px;
+              border-bottom: lightgray 1px solid;
+              padding-left: 15%;
+              -webkit-box-shadow: 0px 7px 5px 0px rgba(161,161,161,1);
+              -moz-box-shadow: 0px 7px 5px 0px rgba(161,161,161,1);
+              box-shadow: 0px 0px 5px 0px rgba(161,161,161,1);
+            }
+            .esquerda{
+              display: flex;
+              flex-flow: column;
+              justify-content: center;
+              align-items: center;
+              margin-right: 20px;
+            }
+            .espacoAcima{
+              margin-top: 5%;
+            }
+            .alturaTotal{
+              height:100%;
+            }
+            .corpoCartao{
+              display: flex;
+              flex-flow: column;
+              align-items: center;
+            }
+            .corpoCartao .card-title{
+              margin-top:5%;
+              margin-bottom: 5%;
+            }
+            .conteudo{
+              width: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header class="header">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container m-auto" width="100%">
+                  <a class="navbar-brand" href="#">
+                      <img src="https://boring-feynman-12ba8b.netlify.app/img/bootstrap-5.svg" class="img-fluid" width="200px" alt="">
+                  </a>
+                  <button class="navbar-toggler" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">                      
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Entrar</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle disabled"  data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Seções</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Cartoes</a>
+                          <a class="dropdown-item" href="#">ListGroup</a>
+                          <a class="dropdown-item" href="#">From Control</a>
+                          <a class="dropdown-item" href="#">Tables</a>
+                          <a class="dropdown-item" href="#">Toast</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Footer</a>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="aula02_paginaDesafio.html">FlexBox</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container espacoAcima">            
+            <div class="row">
+                <div class="col-md-6">
+                  <div class="esquerda">
+                    <h2>
+                      Formulário de Login
+                    </h2>
+                    <p>
+                      Seja bem vindo ao Bootstrap
+                    </p>
+                    <img src="https://boring-feynman-12ba8b.netlify.app/img/bootstrap-icons.png">
+                  </div>                    
+                </div>
+                
+                <div class="col-md-6">
+                  <div class="card alturaTotal">                    
+                    <div class="card-body corpoCartao">
+                      <h2 class="card-title">Informe aqui seu usuário e senha</h2>
+                      <div class="conteudo">
+                        <form class="p-5">
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Seu email</label>
+                            <input type="email" class="form-control">
+                            <small class="form-text text-muted">Adicione aqui seu email.</small>
+                          </div>
+                          <div class="form-group">
+                            <label for="senha">Senha</label>
+                            <input type="password" class="form-control">
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input">
+                            <label class="form-check-label">Me mantenha conectado</label>
+                          </div>
+                          <br>
+                          <button type="button" onclick="chamaLogin()" class="btn btn-primary">Clique aqui para logar</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>        
+    </body>
+    <script>
+      function chamaLogin(){
+        window.location.replace("aula01_paginaDesafio.html");
+      }
+    </script>
+</html>
