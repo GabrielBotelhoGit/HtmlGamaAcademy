@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8ac0ce319f.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <title>Bootstrap parte #01</title>
+    <body>
+        <div id="root">            
+        </div>        
+    </body>
+    <script>
+        window.onload = function () {
+            
+            primeiraScreen();
+            
+        }
+        function primeiraScreen(){                        
+            let form = `
+            <div class="card alturaTotal">                    
+                <div class="card-body corpoCartao">
+                    <h2 class="card-title">Informe aqui seus dados cadastrais</h2>
+                    <div class="conteudo">
+                        <form class="p-5">
+                            <div class="form-group">
+                                <label>Nome</label>
+                                <input type="text" id="inpNome" class="form-control">                                
+                            </div>                                                        
+                            <div class="form-group">
+                                <label>Idade</label>
+                                <input type="number" id="inpIdade" class="form-control">                                
+                            </div>                                                        
+                            <div class="form-group">
+                                <label>Profissão</label>
+                                <select id="selProfissao" class="form-control">
+                                    <option value='Carteiro'>Carteiro</option>
+                                    <option value='Carteiro'>Motorista</option>
+                                    <option value='Carteiro'>Programador</option>
+                                </select>
+                            </div>                                                        
+                            <div class="form-group">
+                                <label>Endereço</label>
+                                <input type="text" id="inpEndereco" class="form-control">                                
+                            </div>                                                        
+                            <div class="form-group">
+                                <label>Estado</label>
+                                <input type="text" id="inpEstado" class="form-control">                                
+                            </div>                              
+                            <div class="form-group">
+                                <label>Municipio</label>
+                                <input type="text" id="inpMunicipio" class="form-control">                                
+                            </div>                                                        
+                            <br>
+                            <button type="button" onclick="chamaLogin()" class="btn btn-primary">Clique aqui para logar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            `;
+            imprimeTela(form);
+        }
+
+        function chamaLogin(){
+            let oUsuario = {
+                "nome": document.getElementById("inpNome").value,
+                "idade": document.getElementById("inpIdade").value,
+                "profissao": document.getElementById("selProfissao").value,
+                "endereco": document.getElementById("inpEndereco").value,
+                "estado": document.getElementById("inpEstado").value,
+                "municipio": document.getElementById("inpMunicipio").value
+            };
+            waitLoad();
+            setTimeout(function () {
+                segundaScreen(oUsuario);
+            }, 3000);
+            
+        }
+
+        function segundaScreen(oUsuario){
+            let objCompleto = `
+                <div class="card alturaTotal">                    
+                    <div class="card-body corpoCartao">
+                        <h2 class="card-title">Dados cadastrados:</h2>
+                        <div class="conteudo">`;
+            objCompleto += getParteObjeto("Nome", oUsuario.nome);
+            objCompleto += getParteObjeto("Idade", oUsuario.idade);
+            objCompleto += getParteObjeto("Profissão", oUsuario.profissao);
+            objCompleto += getParteObjeto("Endereço", oUsuario.endereco);
+            objCompleto += getParteObjeto("Estado", oUsuario.estado);
+            objCompleto += getParteObjeto("Municipio", oUsuario.municipio);    
+            objCompleto += `
+                        </div>
+                    </div>
+                </div>
+            `;
+            imprimeTela(objCompleto);
+        }
+
+        function imprimeTela(conteudo){
+            let app = document.getElementById("root");
+            app.innerHTML = conteudo;
+        }
+
+        function getParteObjeto(pergunta, resposta){
+            let obj = `<div class="form-group">
+                            <label>` + pergunta + `</label>
+                            <input type="text" disabled class="form-control" value="` + resposta + `">                                
+                        </div> `;
+            return obj;
+        }
+
+        function waitLoad() {
+            let loader = `
+            <div class="spinner-grow text-primary"  role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            `;
+            imprimeTela(loader);
+        }
+    </script>
+</head>

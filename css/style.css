@@ -269,3 +269,10 @@ i {
     transition: 1s;
   }
 }
+
+#root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
