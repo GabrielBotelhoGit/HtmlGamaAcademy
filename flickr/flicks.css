@@ -1,0 +1,8 @@
+body{
+    background-image: url("https://identity.flickr.com/img/033120190455-by-Henry.26d9f56a.jpg");
+}
+#results{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
